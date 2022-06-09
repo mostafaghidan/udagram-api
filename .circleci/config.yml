@@ -6,10 +6,11 @@ orbs:
 jobs:
     build:
         docker:
-            - image: "cimg/base:stable"
+            - image: "cimg/node:16"
         steps:
             - node/install
             - checkout 
+            - aws-cli/setup
             - run:
                 name: Install Front-End Dependencies
                 command: npm run frontend:install
