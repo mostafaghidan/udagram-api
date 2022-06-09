@@ -6,10 +6,11 @@ orbs:
 jobs:
     build:
         docker:
-            - image: "cimg/node:14.15"
+            - image: "cimg/base:stable"
         steps:
             - node/install
-              node version: '14.15'
+            - eb/setup 
+            - aws-cli/setup
             - checkout 
             - run:
                 name: Install Front-End Dependencies
@@ -23,15 +24,6 @@ jobs:
             - run:
                 name: Back-End Build
                 command: npm run backend:build
-    deploy:
-        docker:
-            - image: "cimg/base:stable"
-        steps:
-            - node/install
-              node version: '14.15'
-            - eb/setup
-            - aws-cli/setup
-            - checkout
             - run:
                 name: Deploy Backend Application
                 command: npm run backend:deploy
