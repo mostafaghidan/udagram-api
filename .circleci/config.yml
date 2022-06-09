@@ -41,7 +41,7 @@ workflows:
       my-work:
           jobs:
             - build
-            - deploy
-                requires
+            - deploy:
+                requires:
                   - build
             
