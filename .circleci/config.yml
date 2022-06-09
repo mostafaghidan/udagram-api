@@ -5,6 +5,8 @@ orbs:
     eb: circleci/aws-elastic-beanstalk@1.0.2
 jobs:
     build:
+        docker:
+            - image: "cimg/base:stable"
         steps:
             - node/install
             - checkout 
@@ -28,3 +30,12 @@ jobs:
             - run:
                 name: Deploy Frontend Application
                 command: npm run frontend:deploy
+workflows:
+  build-and-deploy:
+    jobs:
+      -build-and-deploy:
+        context: aws
+          branches:
+            only:
+              -main
+    
