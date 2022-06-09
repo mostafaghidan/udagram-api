@@ -1,14 +1,10 @@
 version: 2.1
-
-
 orbs:
     node: circleci/node@5.0.2
     aws-cli: circleci/aws-cli@3.1.1
     eb: circleci/aws-elastic-beanstalk@2.0.1
-workflows:
-    my-workflows:
-        jobs:
-    - build:
+jobs:
+    build:
         docker:
             - image: "cimg/node:14.15"
         steps:
@@ -26,7 +22,7 @@ workflows:
             - run:
                 name: Back-End Build
                 command: npm run backend:build
-    - deploy:
+    deploy:
         docker:
             - image: "cimg/base:stable"
         steps:
@@ -39,4 +35,13 @@ workflows:
                 command: npm run backend:deploy
             - run:
                 name: Deploy Frontend Application
-                command: npm run frontend:deploy           
+                command: npm run frontend:deploy
+
+  workflows:
+      version: 2.1
+      my-work:
+          jobs:
+            - build
+            - deploy
+               requires:
+                  - build              
