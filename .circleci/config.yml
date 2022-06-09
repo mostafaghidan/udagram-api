@@ -33,10 +33,8 @@ jobs:
                 name: Deploy Frontend Application
                 command: npm run frontend:deploy
 workflows:
-      version: 2.1
       my-work:
           jobs:
             - build
             - deploy
-               requires:
-                  - build              
+            
