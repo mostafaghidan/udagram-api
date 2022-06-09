@@ -10,8 +10,6 @@ jobs:
         steps:
             - node/install
             - checkout 
-            - aws-cli/setup
-              profile-name: default
             - run:
                 name: Install Front-End Dependencies
                 command: npm run frontend:install
