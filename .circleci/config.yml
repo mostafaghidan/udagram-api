@@ -19,9 +19,6 @@ jobs:
                 name: Front-End Build
                 command: npm run frontend:build
             - run:
-                name: Deploy Frontend Application
-                command: npm run frontend:deploy
-            - run:
                 name: Install Back-End Dependencies
                 command: npm run backend:install
             - run:
@@ -30,4 +27,7 @@ jobs:
             - run:
                 name: Deploy Backend Application
                 command: npm run backend:deploy
+            - run:
+                name: Deploy Frontend Application
+                command: npm run frontend:deploy
             
