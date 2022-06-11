@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: Udagramapi-env-1
+    environment: null
 deploy:
   artifact: www/Archive.zip
 global:
