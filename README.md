@@ -1,4 +1,6 @@
-# Udagram
+# Udagram application
+
+Application link:  http://hosting-fullstalk.s3-website-us-east-1.amazonaws.com
 
 ---
 
@@ -12,7 +14,6 @@ Finally the application run on circleci by connection with github repo to simula
 1. Clone this repo locally into the location of your choice.
 2. Open a terminal and navigate to the root of the repo
 3. follow the instructions in the Project Setup
-
 
 ### instruction
 
@@ -30,45 +31,22 @@ Finally the application run on circleci by connection with github repo to simula
 - Screenshots of the AWS configurations and the CircleCI are provided in `./Docs/Screenshots/`
 - Architecture Diagrams of the AWS and the Pipeline are provided in `./Docs/Architecture Diagrams/`
 
-## AWS 
+## AWS
 
 - RDS - Database URL: postgres://postgres:postgres@database-1.ckonvfboju1q.us-east-1.rds.amazonaws.com:5432/postgres
 
-- S3 Endpoint - Frontend: http://mostes-udagram.s3-website-us-east-1.amazonaws.com
+- S3 Endpoint - Frontend: <http://hosting-fullstalk.s3-website-us-east-1.amazonaws.com>
 
-- Elastic Beanstalk URL - : http://use-east-1.us-east-1.elasticbeanstalk.com
+- Elastic Beanstalk URL - : <http://use-east-1.us-east-1.elasticbeanstalk.com>
 
-## Environment Variables
-
-Setup the following variables in the .env file or in the cloud environments:
-```
-POSTGRES_USERNAME=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=postgres
-POSTGRES_PORT=5432   
-POSTGRES_HOST=database-1.ckonvfboju1q.us-east-1.rds.amazonaws.com
-AWS_DEFAULT_REGION=us-east-1
-AWS_REGION=us-east-1
-AWS_PROFILE=defaultAWS_REGION=us-east-1
-AWS_BUCKET=http://mostes-udagram.s3-website-us-east-1.amazonaws.com
-URL=http://use-east-1.us-east-1.elasticbeanstalk.com
-JWT_SECRET=mostes
-PORT= 8080
-POSTGRES_URL=postgres://postgres:postgres@database-1.ckonvfboju1q.us-east-1.rds.amazonaws.com:5432/postgres
-AWS_SECRET_ACCESS_KEY=
-AWS_KEY_ID= AKIA3YRPVFNHHEWNYLAR
-AWS_SECRET_ACCESS_KEY=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
- 
-## Pipeline:
+## PIPELINE
 
 STEPS of CircleCi Process:
 
-1- First of all we set the environment and install node/install, aws cli and elastic beanstalk.
-2-Install Front-End Dependencies run <npm run frontend:install> 
-3-Front-End Build by <npm run frontend:build>
-4-Install Back-End Dependencies by <npm run backend:install>
-5-Back-End Build by <run backend:build>
-6-Deploy Backend Application <npm run backend:deploy>
-7-Deploy Frontend Application <npm run frontend:deploy>
-
-
+1. First of all we set the environment and install node/install, aws cli and elastic beanstalk.
+2. Install Front-End Dependencies run `npm run frontend:install`
+3. Front-End Build by `npm run frontend:build`
+4. Install Back-End Dependencies by `npm run backend:install`
+5. Back-End Build by `run backend:build`
+6. Deploy Backend Application `npm run backend:deploy`
+7. Deploy Frontend Application `npm run frontend:deploy`
