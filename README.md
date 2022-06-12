@@ -1,6 +1,6 @@
 # Udagram application
 
-Application link:  http://hosting-fullstalk.s3-website-us-east-1.amazonaws.com
+Application link:  http://mostes-udagram.s3-website-us-east-1.amazonaws.com
 
 ---
 
@@ -35,9 +35,9 @@ Finally the application run on circleci by connection with github repo to simula
 
 - RDS - Database URL: postgres://postgres:postgres@database-1.ckonvfboju1q.us-east-1.rds.amazonaws.com:5432/postgres
 
-- S3 Endpoint - Frontend: <http://hosting-fullstalk.s3-website-us-east-1.amazonaws.com>
+- S3 Endpoint - Frontend: http://mostes-udagram.s3-website-us-east-1.amazonaws.com
 
-- Elastic Beanstalk URL - : <http://use-east-1.us-east-1.elasticbeanstalk.com>
+- Elastic Beanstalk URL - : http://Udagramapi-env-3.eba-ghjrv9ve.us-east-1.elasticbeanstalk.com/api/v0
 
 ## PIPELINE
 
